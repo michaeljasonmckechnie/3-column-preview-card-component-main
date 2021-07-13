@@ -19,6 +19,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 375px;
+  margin: auto auto;
 }
 
 .flex-container #sedan {
