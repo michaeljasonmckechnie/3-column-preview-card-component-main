@@ -8,6 +8,9 @@
 
 body {
   color: rgba(255, 255, 255, 0.75);
+  background-image: repeating-linear-gradient(90deg, #0005, #fff3, #0005), repeating-linear-gradient(45deg, rgba(227, 136, 38, 0.5) 0px 1px, rgba(0, 105, 112, 0.75) 1px 36px, rgba(0, 66, 65, 0.5) 31px 71px), repeating-linear-gradient(-45deg, #f00f, #ffff, #00ff);
+  -webkit-backdrop-filter: hue-rotate(275deg) opacity(0.5) saturate(200%) contrast(200%) brightness(300%);
+          backdrop-filter: hue-rotate(275deg) opacity(0.5) saturate(200%) contrast(200%) brightness(300%);
 }
 
 .flex-container {
@@ -81,19 +84,139 @@ body {
 
 .flex-container #sedan .button {
   color: #e38826;
+  border: 1px solid #e38826;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.flex-container #sedan .button:hover {
+  background: #e38826;
+  color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 3px 5px white;
+          box-shadow: 0 3px 5px white;
 }
 
 .flex-container #suv .button {
   color: #006970;
+  border: 1px solid #006970;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.flex-container #suv .button:hover {
+  background: #006970;
+  color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 3px 5px white;
+          box-shadow: 0 3px 5px white;
 }
 
 .flex-container #luxury .button {
   color: #004241;
+  border: 1px solid #004241;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.flex-container #luxury .button:hover {
+  background: #004241;
+  color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 3px 5px white;
+          box-shadow: 0 3px 5px white;
 }
 
 .flex-container .attribution {
   background: #333;
   border-radius: 5px;
-  margin: 5px 0px;
+  margin: 15px 0px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 1440px;
+    height: 100vh;
+    width: 100vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .flex-container .flex-item {
+    -webkit-transition: border-radius 0.5s, -webkit-transform 1s;
+    transition: border-radius 0.5s, -webkit-transform 1s;
+    transition: transform 1s, border-radius 0.5s;
+    transition: transform 1s, border-radius 0.5s, -webkit-transform 1s;
+    overflow: hidden;
+  }
+  .flex-container #sedan:hover {
+    -webkit-transform: scale(1.2, 1.2) translate(-25px, -20px);
+            transform: scale(1.2, 1.2) translate(-25px, -20px);
+    -webkit-box-shadow: 0 15px 15px #333;
+            box-shadow: 0 15px 15px #333;
+    z-index: 1;
+    border-radius: 25px;
+  }
+  .flex-container #suv:hover {
+    -webkit-transform: scale(1.2, 1.2) translate(-25px, -20px);
+            transform: scale(1.2, 1.2) translate(-25px, -20px);
+    -webkit-box-shadow: 0 15px 15px #333;
+            box-shadow: 0 15px 15px #333;
+    z-index: 1;
+    border-radius: 25px;
+  }
+  .flex-container #luxury:hover {
+    -webkit-transform: scale(1.2, 1.2) translate(-25px, -20px);
+            transform: scale(1.2, 1.2) translate(-25px, -20px);
+    -webkit-box-shadow: 0 15px 15px #333;
+            box-shadow: 0 15px 15px #333;
+    z-index: 1;
+    border-radius: 25px;
+  }
+  .flex-container #sedan {
+    position: relative;
+    border-top-left-radius: none;
+    border-top-right-radius: unset;
+    z-index: 0;
+  }
+  .flex-container #luxury {
+    position: relative;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: none;
+    z-index: 0;
+  }
+  .flex-container #suv {
+    z-index: 0;
+    position: relative;
+  }
+  .flex-container #sedan {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .flex-container #luxury {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .flex-container .attribution {
+    display: none;
+  }
+  .flex-item {
+    max-width: 300px;
+    height: auto;
+    min-height: 500px;
+    padding: unset;
+  }
+  .button {
+    position: absolute;
+    bottom: 75px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
