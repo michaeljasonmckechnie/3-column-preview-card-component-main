@@ -11,6 +11,30 @@ body {
   background-image: repeating-linear-gradient(90deg, #0005, #fff3, #0005), repeating-linear-gradient(45deg, rgba(227, 136, 38, 0.5) 0px 1px, rgba(0, 105, 112, 0.75) 1px 36px, rgba(0, 66, 65, 0.5) 31px 71px), repeating-linear-gradient(-45deg, #f00f, #ffff, #00ff);
   -webkit-backdrop-filter: hue-rotate(180deg) opacity(0.5) saturate(100%) contrast(300%) brightness(200%);
           backdrop-filter: hue-rotate(180deg) opacity(0.5) saturate(100%) contrast(300%) brightness(200%);
+  -webkit-animation: rotate 10s linear 0s infinite  forwards;
+          animation: rotate 10s linear 0s infinite  forwards;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-backdrop-filter: hue-rotate(0deg);
+            backdrop-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-backdrop-filter: hue-rotate(360deg);
+            backdrop-filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-backdrop-filter: hue-rotate(0deg);
+            backdrop-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-backdrop-filter: hue-rotate(360deg);
+            backdrop-filter: hue-rotate(360deg);
+  }
 }
 
 .flex-container {
