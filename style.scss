@@ -9,7 +9,7 @@
 body {
     color: hsla(0, 0%, 100%, 0.75);
     background-image: repeating-linear-gradient(90deg, #0005, #fff3, #0005), repeating-linear-gradient(45deg, hsla(31,77%,52%,.50) 0px 1px, hsla(184, 100%, 22%,.75) 1px 36px, hsla(179, 100%, 13%,.5) 31px 71px), repeating-linear-gradient(-45deg, #f00f, #ffff, #00ff);
-    backdrop-filter: hue-rotate(180deg) opacity(.5) saturate(100%) contrast(300%) brightness(100%);
+    backdrop-filter: hue-rotate(180deg) opacity(.5) saturate(100%) contrast(300%) brightness(200%);
 }
 
 .flex-container {
